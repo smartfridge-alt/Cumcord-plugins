@@ -1,0 +1,7 @@
+{
+    "name": "EasyRestart",
+    "description": "Press F4 to restart/reload your Discord.",
+    "author": "smartfridge",
+    "file": "index.js",
+    "license": "MIT"
+  }
