@@ -1,0 +1,7 @@
+{
+    "name": "SilentTyping",
+    "description": "Makes Discord not send your typing indicator",
+    "author": "Ducko/smartfridge",
+    "file": "index.js",
+    "license": "MIT"
+  }
