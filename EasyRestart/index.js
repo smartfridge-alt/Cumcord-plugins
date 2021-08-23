@@ -52,5 +52,11 @@ export default {
       document.addEventListener("keydown", keydownHandler);
   },
   onUnload() {
+    keydownHandler = async (event) => {
+        if (event.code == "F4") {
+          event.preventDefault();
+          CreateModal();
+        }
+      };
     document.removeEventListener("keydown", keydownHandler);
   }}
