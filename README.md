@@ -1,5 +1,5 @@
 # my cumcord plugins
 Copy and paste one of the following links to add plugin of you choice:   
-[ServerCount](https://smartfridge.ml/Cumcord-plugins/ServerCount/dist/)   
-[Fucklytics](https://smartfridge.ml/Cumcord-plugins/Fucklytics/dist/)     
-[SilentTyping](https://smartfridge.ml/Cumcord-plugins/SilentTyping/dist/)
+[ServerCount](https://smartfridge.is-a.dev/Cumcord-plugins/ServerCount/dist/)   
+[Fucklytics](https://smartfridge.is-a.dev/Cumcord-plugins/Fucklytics/dist/)     
+[SilentTyping](https://smartfridge.is-a.dev/Cumcord-plugins/SilentTyping/dist/)
