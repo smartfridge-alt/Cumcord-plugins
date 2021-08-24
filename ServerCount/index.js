@@ -42,8 +42,7 @@ export default {
     css = window.cumcord.patcher.injectCSS(`
         div#cc_server_count {
             text-align: center;
-            font-family: --fontfds-primary
-            
+            font-family: --font-primary
         }
         `);
     timer = setInterval(function () {
