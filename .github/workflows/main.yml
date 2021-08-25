@@ -3,7 +3,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ trunk ]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i -g sperm
-    - run: for plugin in *; do cd $plugin; sperm build cumcord_manifest.json; cd ..; done
+    - run: for plugin in $(ls -d -- */); do cd $plugin; sperm build cumcord_manifest.json; cd ..; done
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
