@@ -1,0 +1,7 @@
+{
+    "name": "QuickBlur",
+    "description": "Blurs your screen using a shortcut.",
+    "author": "smartfridge",
+    "file": "index.js",
+    "license": "MIT"
+  }

@@ -1,0 +1,1 @@
+(function(){"use strict";const o={modules:window.cumcord.modules,patcher:window.cumcord.patcher}.modules,t=o.webpackModules;let n,s;return o.commonModules,{onLoad(){n=t.findByProps("startTyping"),s=n.startTyping,n.startTyping=()=>{}},onUnload(){t.findByProps("startTyping").startTyping=s}}})();

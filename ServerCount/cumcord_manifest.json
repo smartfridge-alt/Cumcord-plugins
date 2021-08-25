@@ -1,0 +1,7 @@
+{
+  "name": "Server Count",
+  "description": "Shows a simple server count under home button.",
+  "author": "smartfridge",
+  "file": "index.js",
+  "license": "MIT"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Twitch Emotes",
+    "description": "Converts text into images for Twitch global emotes + BetterTTV emotes",
+    "author": "Ducko/smartfridge",
+    "file": "index.js",
+    "license": "MIT"
+  }
