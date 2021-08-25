@@ -28,6 +28,7 @@ const setup = () => {
 
   try {
     original = getWantedHandler(mod);
+    console.log("Sucessfully injected noMessageDeletion")
   } catch (e) {
     console.error("Failed to inject noMessageDeletion");
     return setTimeout(setup, 3000);
