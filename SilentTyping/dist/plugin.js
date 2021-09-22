@@ -1,1 +1,1 @@
-(function(){"use strict";const o={modules:window.cumcord.modules,patcher:window.cumcord.patcher}.modules,t=o.webpackModules;let n,s;return o.commonModules,{onLoad(){n=t.findByProps("startTyping"),s=n.startTyping,n.startTyping=()=>{}},onUnload(){t.findByProps("startTyping").startTyping=s}}})();
+(function(n){"use strict";let t,r;var o={onLoad(){t=n.webpackModules.findByProps("startTyping"),r=t.startTyping,t.startTyping=()=>{}},onUnload(){n.webpackModules.findByProps("startTyping").startTyping=r}};return o})(cumcord.modules);
