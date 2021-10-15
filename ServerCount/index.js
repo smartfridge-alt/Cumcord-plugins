@@ -37,7 +37,8 @@ function refreshCount() {
   }
   return;
 }
-export default {
+export default (data) => {
+  return {
   onLoad() {
     css = window.cumcord.patcher.injectCSS(`
         div#cc_server_count {
@@ -60,4 +61,4 @@ export default {
       console.error(`FAILED TO DETACH SERVER COUNTER: ${e}`);
     }
   },
-};
+}};

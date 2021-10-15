@@ -1,8 +1,9 @@
 import { webpackModules } from "@cumcord/modules";
 let mod;
 let orig;
-export default {
-  onLoad() {
+export default (data) => {
+  return {
+    onLoad() {
     mod = webpackModules.findByProps('startTyping');
     orig = mod.startTyping;
 
@@ -10,5 +11,5 @@ export default {
   },
   onUnload() {
     webpackModules.findByProps('startTyping').startTyping = orig;
-  },
-};
+  }
+}};
