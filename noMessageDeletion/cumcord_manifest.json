@@ -1,7 +1,0 @@
-{
-    "name": "noMessageDeletion",
-    "description": "Messages only turn red instead of completely disappearing.",
-    "author": "Ducko/smartfridge",
-    "file": "index.js",
-    "license": "MIT"
-  }

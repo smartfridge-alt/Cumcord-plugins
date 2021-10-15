@@ -69,7 +69,8 @@ const disableSentry = () => {
   window.__SENTRY__.hub.getClient().getOptions().enabled = false;
 };
 
-export default {
+export default (data) => {
+  return {
     onLoad: async function() {
     setAnalytics(blocking.science);
     setSentry(blocking.sentry);
@@ -84,5 +85,5 @@ export default {
     } catch (e) {}
 
   },
-
+  }
 };
