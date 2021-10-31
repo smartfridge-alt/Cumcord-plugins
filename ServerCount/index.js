@@ -1,4 +1,5 @@
 import { webpackModules } from "@cumcord/modules";
+import { injectCSS } from "@cumcord/patcher";
 let css;
 let timer;
 let sep = {},
@@ -40,7 +41,7 @@ function refreshCount() {
 export default (data) => {
   return {
   onLoad() {
-    css = window.cumcord.patcher.injectCSS(`
+    css = injectCSS(`
         div#cc_server_count {
             text-align: center;
             font-family: var(--font-primary);

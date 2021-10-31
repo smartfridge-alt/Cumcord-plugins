@@ -1,25 +1,6 @@
 import { webpackModules } from "@cumcord/modules";
 
-let blocking = {
-  'compat': '2.1.0',
-
-  'science': true,
-  'sentry': true,
-  'crash': true
-};
-
-let originals = {
-  'analytics1': undefined,
-  'analytics2': undefined,
-  'crash': undefined
-};
-
-const setAnalytics = (val) => {
-  if (!val) enableAnalytics();
-    else disableAnalytics();
-};
-
-const enableAnalytics = () => {
+function enableAnalytics() {
   const analyticsMod1 = webpackModules.findByProps('analyticsTrackingStoreMaker');
   const analyticsMod2 = webpackModules.findByProps('getSuperPropertiesBase64');
 
@@ -27,7 +8,7 @@ const enableAnalytics = () => {
   analyticsMod2.track = originals.analytics2;
 };
 
-const disableAnalytics = () => {
+function disableAnalytics() {
   const analyticsMod1 = webpackModules.findByProps('analyticsTrackingStoreMaker');
   const analyticsMod2 = webpackModules.findByProps('getSuperPropertiesBase64');
 
@@ -38,43 +19,33 @@ const disableAnalytics = () => {
   analyticsMod2.track = () => {};
 };
 
-const setCrash = (val) => {
-  if (!val) enableCrash();
-    else disableCrash();
-};
-
-const enableCrash = () => {
+function enableCrash() {
   const crashMod = webpackModules.findByProps('submitLiveCrashReport');
 
   crashMod.submitLiveCrashReport = originals.crash;
 };
 
-const disableCrash = () => {
+function disableCrash() {
   const crashMod = webpackModules.findByProps('submitLiveCrashReport');
 
   originals.crash = crashMod.submitLiveCrashReport;
   crashMod.submitLiveCrashReport = () => {};
 };
 
-const setSentry = (val) => {
-  if (!val) enableSentry();
-    else disableSentry();
-};
-
-const enableSentry = () => {
+function enableSentry(){
   window.__SENTRY__.hub.getClient().getOptions().enabled = true;
 };
 
-const disableSentry = () => {
+function disableSentry() {
   window.__SENTRY__.hub.getClient().getOptions().enabled = false;
 };
 
 export default (data) => {
   return {
     onLoad: async function() {
-    setAnalytics(blocking.science);
-    setSentry(blocking.sentry);
-    setCrash(blocking.crash);
+    disableSentry();
+    disableAnalytics();
+    disableCrash();
   },
 
   onUnload: async function() {
@@ -83,7 +54,7 @@ export default (data) => {
       enableSentry();
       enableCrash();
     } catch (e) {}
-
+    console.error("Fucklytics: I farted.")
   },
   }
 };
