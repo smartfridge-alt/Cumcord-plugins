@@ -1,0 +1,7 @@
+{
+  "name": "Fucklytics",
+  "description": "Blocks Discord (Science) analytics, crash reports and Sentry",
+  "author": "Ducko/smartfridge",
+  "file": "index.js",
+  "license": "MIT"
+}
