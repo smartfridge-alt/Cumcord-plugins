@@ -1,0 +1,7 @@
+{
+  "name": "spermhttp Client",
+  "description": "sperm-http is a special http-server to help the development of Cumcord plugins. This plugin is a client-side extension to make your coding automated.",
+  "author": "smartfridge",
+  "file": "index.js",
+  "license": "MIT"
+}
